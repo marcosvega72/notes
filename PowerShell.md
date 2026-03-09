@@ -49,3 +49,12 @@ TcpTestSucceeded : True
   # Getting the contents of the clipboard and display it to the command-line:
   Get-Clipboard
 ```
+
+- Environment Variables
+```shell
+  # List all of them
+  Get-ChildItem Env:
+
+  # Just check the value of one e.g.:
+  $Env:Path
+```
