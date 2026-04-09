@@ -108,6 +108,12 @@ git update-index --skip-worktree **/.classpath **/**/.classpath axpomdm-jar/.set
   git diff --name-only master...
 ```
 
+- Importar solo un fichero concreto desde otra rama (sobreescribiendo el posible local)
+
+```shell
+  git checkout <RAMA> -- ruta/del/fichero.txt
+```
+
 - Deshacer un pull que hiciste entre ramas equivocadas y se mezclaron
 
 ```shell
