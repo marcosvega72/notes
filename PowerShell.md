@@ -58,3 +58,8 @@ TcpTestSucceeded : True
   # Just check the value of one e.g.:
   $Env:Path
 ```
+
+- Show history of typed commands
+```shell
+  cat (Get-PSReadlineOption).HistorySavePath
+```
