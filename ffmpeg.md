@@ -5,6 +5,10 @@ ffmpeg
 ```shell
   ffmpeg -i "movie.mkv" -c:v libx265 -sn -map 0:v:0 -map 0:a:1 -ss 01:00:10 -t 00:01:00 sample.mp4
 ```
+- A fragment with hard embedded subtitles, resized to 720p, and compatible with Whatsapp
+```shell
+  ffmpeg -i "movie.mkv" -vf "subtitles=subs.srt,scale=-2:720" -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p -ss 01:14:42 -to 01:15:45 output.mp4
+```
 - To convert all videos in a folder to their H.265 counterpart in Windows, just create a .BAT file containing:
 ```shell
   for %%a in ("*.avi") do ffmpeg -i "%%a" -c:v libx265 -vtag hvc1 "%%~na.mp4"
